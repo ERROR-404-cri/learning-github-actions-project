@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "first_name": "Elisabet",
+    "last_name": "Camell",
+    "email": "ecamell0@cnn.com",
+    "gender": "Female",
+    "ip_address": "91.34.96.208"
+  },
+  {
+    "id": 2,
+    "first_name": "Nady",
+    "last_name": "Montford",
+    "email": "nmontford1@eepurl.com",
+    "gender": "Female",
+    "ip_address": "31.85.227.49"
+  },
+  {
+    "id": 3,
+    "first_name": "Anica",
+    "last_name": "Jendrich",
+    "email": "ajendrich2@ustream.tv",
+    "gender": "Female",
+    "ip_address": "226.169.236.152"
+  },
+  {
+    "id": 4,
+    "first_name": "Page",
+    "last_name": "Habben",
+    "email": "phabben3@ucoz.ru",
+    "gender": "Female",
+    "ip_address": "188.47.176.2"
+  },
+  {
+    "id": 5,
+    "first_name": "Gabi",
+    "last_name": "Molines",
+    "email": "gmolines4@rakuten.co.jp",
+    "gender": "Male",
+    "ip_address": "242.13.96.128"
+  }
+]
