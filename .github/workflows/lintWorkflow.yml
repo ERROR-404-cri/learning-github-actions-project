@@ -6,14 +6,15 @@ jobs:
   check-lint-rules:
     runs-on: "ubuntu-latest"
     steps:
+      - name: "verify lint on the code"
+        run: npm run lint
       - name: "get code"
         uses: actions/checkout@v4
       - name: "install nodeJS"
         uses: actions/setup-node@v4
       - name: "clean install all dependency of code"
         run: npm ci
-      - name: "verify lint on the code"
-        run: npm run lint
+
       - name: "build the codebase"
         if: contains(github.event.pull_request.labels.*.name, 'build it')
         run: |
