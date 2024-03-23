@@ -8,6 +8,6 @@ describe("test Card", () => {
     render(<Card />);
 
     const cardContainer = screen.getByTestId("Card-container");
-    expect(cardContainer).not.toBeInTheDocument();
+    expect(cardContainer).toBeInTheDocument();
   });
 });
