@@ -18,5 +18,10 @@
   "plugins": ["react", "react-hooks"],
   "rules": {
     // Add your custom rules here
+  },
+  "settings": {
+    "react": {
+      "version": "^18.2.0"
+    }
   }
 }
