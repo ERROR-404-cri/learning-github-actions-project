@@ -14,6 +14,9 @@ jobs:
         run: npm ci
       - name: "verify lint on the code"
         run: npm run lint
+      - name: "verify unit test"
+        run: npm run test
+
       - name: "build the codebase"
         if: contains(github.event.pull_request.labels.*.name, 'build it')
         run: |
