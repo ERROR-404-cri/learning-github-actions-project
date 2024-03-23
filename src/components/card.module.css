@@ -5,3 +5,7 @@
   width: 90%;
   border: 1px solid salmon;
 }
+
+.test {
+  display: flex;
+}
