@@ -1,7 +1,7 @@
 name: "workflow to run verify unit tests on each PR"
 on:
   pull_request:
-    types: [opened, edited, labeled, unlabeled]
+    types: [opened, edited, synchronize, labeled, unlabeled]
 jobs:
   first-job:
     runs-on: "ubuntu-latest"
