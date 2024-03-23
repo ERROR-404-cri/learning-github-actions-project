@@ -1,0 +1,16 @@
+name: "workflow to run on label change only"
+on:
+  pull_request:
+    types: [labeled, unlabeled]
+jobs:
+  first-job:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "get code"
+        uses: actions/checkout@v4
+      - name: "install nodeJS"
+        uses: actions/setup-node@v4
+      - name: "clean install all dependency of code"
+        run: npm ci
+      - name: "verify unit test"
+        run: npm run test
