@@ -1,9 +1,9 @@
-name: "workflow to run on label change only"
+name: "check lint"
 on:
   pull_request:
-    types: [labeled, unlabeled]
+    types: [opened, labeled, unlabeled, synchronize]
 jobs:
-  first-job:
+  check-lint-rules:
     runs-on: "ubuntu-latest"
     steps:
       - name: "get code"
@@ -12,6 +12,8 @@ jobs:
         uses: actions/setup-node@v4
       - name: "clean install all dependency of code"
         run: npm ci
+      - name: "verify lint on the code"
+        run: npm run lint
       - name: "verify unit test"
         run: npm run test
 
@@ -20,3 +22,14 @@ jobs:
         run: |
           echo "Tag 'build it' found in labels."
           npm run build
+
+  second-job:
+    needs: "check-lint-rules"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "get code"
+        uses: actions/checkout@v4
+      - name: "install nodeJS"
+        uses: actions/setup-node@v4
+      - name: "clean install all dependency of code"
+        run: npm ci
