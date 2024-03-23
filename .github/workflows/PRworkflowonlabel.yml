@@ -14,3 +14,9 @@ jobs:
         run: npm ci
       - name: "verify unit test"
         run: npm run test
+
+      - name: "build the codebase"
+        if: contains(github.event.pull_request.labels.*.name, 'build it')
+        run: |
+          echo "Tag 'build it' found in labels."
+          npm run build
