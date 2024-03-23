@@ -21,6 +21,7 @@ jobs:
           npm run build
 
   second-job:
+    needs: "check-lint-rules"
     runs-on: "ubuntu-latest"
     steps:
       - name: "get code"
