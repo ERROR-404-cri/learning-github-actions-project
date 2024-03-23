@@ -4,5 +4,11 @@ jobs:
   test-Job:
     runs-on: "ubuntu-latest"
     steps:
-      - name: "run jest unit tests"
+      - name: "get code"
+        uses: actions/checkout@v4
+      - name: "install nodeJS"
+        uses: actions/setup-node@v4
+      - name: "clean install all dependency of code"
+        run: npm ci
+      - name: "verify unit test"
         run: npm run test
