@@ -1,0 +1,8 @@
+name: "workflow to verify unit tests"
+on: "push"
+jobs:
+  test-Job:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "run jest unit tests"
+        run: npm run test
